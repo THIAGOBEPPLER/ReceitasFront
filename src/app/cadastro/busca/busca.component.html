@@ -1,1 +1,52 @@
-<p>busca works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Busca</h3>
+    <!-- <form [formGroup]="form"> -->
+      <div class="form-group">
+        <label >Nome: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="Placa"
+          formControlName="nome"
+          name="nome"
+        />
+        <br />
+
+        <label >Categoria: </label>
+        <select class="form-control"
+        id="exampleFormControlSelect1"
+        formControlName="categoria">
+          <option>""</option>
+          <option>Salgado</option>
+          <option>Doce</option>
+          <option>Carne</option>
+          <option>Massa</option>
+        </select>
+
+      </div>
+      <button
+        class="form-control"
+        type="submit"
+        class="btn btn-primary"
+      >
+        Buscar
+      </button>
+
+    <!-- </form> -->
+  </div>
+</div>
+<br><br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Duracao</th>
+          <th scope="col">Opcoes</th>
+        </tr>
+      </thead>
+    </table>
+    <br><br><br><br><br>
+
+

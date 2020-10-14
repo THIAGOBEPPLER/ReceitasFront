@@ -1,1 +1,69 @@
-<p>formulario works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Cadastro</h3>
+    <!-- <form [formGroup]="form"> -->
+      <div class="form-group">
+        <label >Nome: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="Placa"
+          formControlName="nome"
+          name="nome"
+        />
+        <br />
+
+        <label >Categoria: </label>
+        <select class="form-control"
+        id="exampleFormControlSelect1"
+        formControlName="categoria">
+          <option>Salgado</option>
+          <option>Doce</option>
+          <option>Carne</option>
+          <option>Massa</option>
+        </select>
+        <br />
+
+        <label >Descricao: </label>
+        <textarea class="form-control"
+        id="exampleFormControlTextarea1"
+        formControlName="descricao"
+        rows="3"></textarea>
+        <br />
+
+        <label>Duracao: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="duracao"
+          formControlName="duracao"
+        />
+        <br />
+        <label >Ingredientes: </label>
+        <select class="form-control"
+        id="exampleFormControlSelect1"
+        formControlName="ingredientes">
+          <option>Ingredientes</option>
+        </select>
+        <br />
+
+      </div>
+      <button
+        class="form-control"
+        type="submit"
+        class="btn btn-primary"
+      >
+        Adicionar
+      </button>||
+      <button
+        class="form-control"
+        type="submit"
+        class="btn btn-primary"
+      >
+        Editar
+      </button>
+
+
+    <!-- </form> -->
+  </div>
+</div>
