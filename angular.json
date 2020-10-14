@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ReceitasFront"
+    }
+  },
+  "defaultProject": "ReceitasFront",
+  "cli": {
+    "analytics": false
+  }
 }
