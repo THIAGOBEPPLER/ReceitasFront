@@ -1,13 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
     <h3>Busca</h3>
-    <!-- <form [formGroup]="form"> -->
+    <form [formGroup]="formB">
       <div class="form-group">
         <label >Nome: </label>
         <input
           class="form-control"
           type="text"
-          id="Placa"
           formControlName="nome"
           name="nome"
         />
@@ -17,7 +16,7 @@
         <select class="form-control"
         id="exampleFormControlSelect1"
         formControlName="categoria">
-          <option>""</option>
+          <option></option>
           <option>Salgado</option>
           <option>Doce</option>
           <option>Carne</option>
@@ -29,11 +28,12 @@
         class="form-control"
         type="submit"
         class="btn btn-primary"
+        (click)="onBuscar()"
       >
         Buscar
       </button>
 
-    <!-- </form> -->
+    </form>
   </div>
 </div>
 <br><br>
@@ -46,6 +46,17 @@
           <th scope="col">Opcoes</th>
         </tr>
       </thead>
+      <tbody>
+        <tr *ngFor="let b of busca">
+          <th scope="col">{{b.nome}} </th>
+          <th scope="col">{{b.categoria}}</th>
+          <th scope="col">{{b.duracao}} </th>
+          <th scope="col">
+            <button class="btn btn-primary" (click)="onEditar(b.id)">Editar</button> &nbsp;
+            <button class="btn btn-danger" (click)="onExcluir(b.id)">Excluir</button>
+          </th>
+        </tr>
+      </tbody>
     </table>
     <br><br><br><br><br>
 

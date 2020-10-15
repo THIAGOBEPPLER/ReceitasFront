@@ -1,1 +1,67 @@
-<p>sugestao works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Sugestao</h3>
+    <form [formGroup]="formS">
+      <div class="form-group">
+
+        <label >Ingredientes: </label>
+        <select class="form-control"
+        id="exampleFormControlSelect1"
+        formControlName="ingredientes"
+        >
+          <option *ngFor="let i of listaIngredientes">
+            {{i.id}}-{{ i.nome}}
+          </option>
+        </select>
+        <br />
+
+        <button
+        class="form-control"
+        type="submit"
+        class="btn btn-primary"
+        (click)="onAdiciona()"
+      >
+        +
+      </button>
+      <br><br>
+      <table>
+        <tr *ngFor="let i of ingredientesAdicionados">
+          <td><input class="form-control" type="text" value=" {{i}} " readonly></td>
+        </tr>
+      </table>
+    <br>
+      </div>
+      <button
+        class="form-control"
+        type="submit"
+        class="btn btn-primary"
+        (click)="onBusca()"
+      >
+        Buscar
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<br><br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Descricao</th>
+          <th scope="col">Duracao</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of sugestao">
+          <th scope="col">{{s.nome}} </th>
+          <th scope="col">{{s.categoria}}</th>
+          <th scope="col">{{s.descricao}}</th>
+          <th scope="col">{{s.duracao}} </th>
+        </tr>
+      </tbody>
+    </table>
+    <br><br><br><br><br>
+
