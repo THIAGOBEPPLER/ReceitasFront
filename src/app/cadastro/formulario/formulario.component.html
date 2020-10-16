@@ -80,6 +80,7 @@
         type="submit"
         class="btn btn-primary"
         [disabled]="!formF.valid"
+        *ngIf="!modoEdicao"
         (click)="onCadastra()"
       >
         Cadastrar
@@ -89,7 +90,9 @@
         type="submit"
         class="btn btn-primary"
         [disabled]="!formF.valid"
-        
+        *ngIf="modoEdicao"
+        (click)="onEdita()"
+
       >
         Editar
       </button> &nbsp;

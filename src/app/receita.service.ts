@@ -51,4 +51,8 @@ export class ReceitaService {
     return this.http.post<string>(this.urlReceita, receita);
   }
 
+  putEdita(receita: EditaReceita): Observable<string>{
+    return this.http.put<string>(this.urlReceita, receita);
+  }
+
 }
