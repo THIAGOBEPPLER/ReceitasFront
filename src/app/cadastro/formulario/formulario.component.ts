@@ -152,6 +152,8 @@ export class FormularioComponent implements OnInit {
     this.editaReceita.descricao = this.formF.value.descricao;
     this.editaReceita.duracao = this.formF.value.duracao;
 
+    this.listaId  = [];
+
     this.ingredientesAdicionados.forEach(i => {
       const parse = (i.split('-', 1)).toString();
       const numero = parseInt(parse, 10);
@@ -161,7 +163,7 @@ export class FormularioComponent implements OnInit {
 
     this.editaReceita.ingredientes = this.listaId;
 
-    console.log(this.editaReceita);
+    console.log(this.editaReceita.ingredientes);
 
 
     // metodo
